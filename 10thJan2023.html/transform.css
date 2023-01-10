@@ -1,0 +1,19 @@
+.wrapper{
+    perspective: 10px;
+}
+.box{
+    /* margin: 200px; */
+    background-color: aqua;
+    /* transform:translate(0px,50px);
+    transform: translateX(100px);
+    transform: translatey(100px);
+    transform: rotate(-45deg);
+    transform: rotate(45deg);
+    transform: scale(1.5,2);
+    transform: scaleX(12,2);
+    transform: skew(1200deg); */
+    transform: scaleZ(2);
+    transform-style: preserve-3d;
+    transform: perspective(100px) scaleZ(5);
+
+}
