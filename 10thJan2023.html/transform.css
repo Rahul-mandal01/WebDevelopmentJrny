@@ -12,8 +12,8 @@
     transform: scale(1.5,2);
     transform: scaleX(12,2);
     transform: skew(1200deg); */
-    transform: scaleZ(2);
-    transform-style: preserve-3d;
-    transform: perspective(100px) scaleZ(5);
+    transform: scaleZ(3);
+    transform-style: preserve-3d; 
+    /* transform: perspective(100px) scaleZ(6);
 
 }

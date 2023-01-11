@@ -1,5 +1,53 @@
-#relates{
-    font-family: 'Times New Roman', Times, serif;
-    background-color: brown;
-    font: 900;
+.zero{
+    border: 10px dotted black;
+    margin: 50px;
+    height: 400px;
+    width: 500px;
+    font-size: 2em;
+    overflow: clip;
+
+    /* Gradient */
+    background-image: radial-gradient(circle, blue, red, green) ;
+    background-image: radial-gradient(circle, blue, #ff0000, green) ;
+    background-image: linear-gradient(blue 5%, red 65%, green 5%) ;
+
+
+    /* Shadow */
+    box-shadow: 6px 6px 6px rgb(183, 12, 188) , 10px 10px 10px rgb(5, 230, 128);
+    color: rgb(34, 235, 78);
+
+    /* transform */
+    transform: translateX(100px);
+    transform: translateY(100px);
+    /* transform: rotate(40deg);
+    transform: rotate(45deg);
+    transform: rotate(180deg); */
+
 }
+
+.one{
+    border: 1px dotted,white;
+    margin: 50px;
+    height: auto;
+    width: 500px;
+    font-size: 4rem;
+    background-color: aliceblue;
+
+     /* Position */
+     position: relative;
+     left: 00px;
+     top: -500px;
+
+     /* position: absolute;
+     left:00px;
+     top: -23px; */
+     /* position: fixed; no movement */
+     /* position: sticky;
+     left: 200px;
+     top: 900px; */
+      /* Not working  */
+}
+body{
+    background-color: tomato;
+}
+

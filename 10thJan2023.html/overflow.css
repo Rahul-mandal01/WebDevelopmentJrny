@@ -8,8 +8,8 @@
     overflow: scroll;
     overflow: visible;
     overflow: inherit;
-    overflow: -moz-hidden-unscrollable;
+    overflow: clip;
     overflow-wrap: normal;
-    overflow:auto;
-
+    overflow-x: scroll;
+    overflow-y: scroll;
 }
