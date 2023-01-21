@@ -1,9 +1,9 @@
-.wrapper{
+/* .wrapper{
     perspective: 10px;
 }
-.box{
+box{
     /* margin: 200px; */
-    background-color: aqua;
+    /* background-color: aqua; */
     /* transform:translate(0px,50px);
     transform: translateX(100px);
     transform: translatey(100px);
@@ -12,8 +12,24 @@
     transform: scale(1.5,2);
     transform: scaleX(12,2);
     transform: skew(1200deg); */
-    transform: scaleZ(3);
-    transform-style: preserve-3d; 
+    /* transform: scaleZ(3);
+    transform-style: preserve-3d;  */
     /* transform: perspective(100px) scaleZ(6);
 
+} */
+div{
+    height:100px;
+    width:100px;
+    background-color: rgb(4, 178, 59);
+    border:1px solid black;
+}
+
+.translated{
+    transform: perspective(20px) translateZ(-20px);
+}
+
+.scaled{
+    margin-left: 200px;
+    transform:perspective(90px) scaleZ(2) rotateY(30deg);
+    /* transform: rotateZ(60deg); */
 }

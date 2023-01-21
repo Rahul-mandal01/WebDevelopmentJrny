@@ -1,0 +1,38 @@
+
+#text1{
+    display: inline;
+    position: fixed;
+    left: 10px;
+    top:0px;
+    color: yellow;
+}
+#text2{
+    display: inline;
+    position: fixed;
+    left: 220px;
+    top:0px;
+    color: yellow;
+}
+#text3{
+    display: inline;
+    position: fixed;
+    left: 10px;
+    top:220px;
+    color: yellow;
+}
+
+#text4{
+    display: inline;
+    position: fixed;
+    left: 220px;
+    top:220px;
+    color: yellow;
+}
+
+#text5{
+    display: inline;
+    position: fixed;
+    left: 110px;
+    top:105px;
+    color: yellow;
+}

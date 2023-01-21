@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .container{
+    height:400px;
+    border: 1px solid greenyellow;
+    display: flex;
+    flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+    /* flex-flow: nowrap;
+    flex-wrap:nowrap; */
+
+    /* justify-content: flex-end;
+    justify-content: flex-start; */
+    /* justify-content: flex-end;
+    align-items:flex-end; */
+
+    /* gap: 10px; */
+
+    /* align-content: flex-start;
+    align-content: flex-end;
+    align-content: center;
+    align-content: space-between;
+    align-content: space-around; */
+    
+    /* justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: stretch;
+    align-items: baseline; */
+    /* flex-grow: 1; */
+
+
+/* } */
+
+/* box1{
+    border: 1px solid brown;
+    background-color: aqua;
+    width:100px; */
+
+    /* flex-basis: 100px;
+    flex-basis: 50%;
+} */
+
+/* #box1{
+    order:2;
+    /* flex-grow: 1; */
+    /* flex-shrink: 4; */
+/* } */
+/* #box2{
+    order:9;
+    /* align-self:stretch ;
+    align-self:center;
+    align-self:flex-start; */
+/* }
+#box3{
+    order:1;
+    /* flex-shrink: 2;
+} */
+/* #box4{
+    order:3;
+}  */
+
+.container{
+    height: 200px;
+    width: 300px;
+    border: 2px solid black;
+
+
+    /* CONVERTING ELEMENT TO FLEX */
+    display: flex;
+
+
+    /* WIDTH INTACT */
+    /* flex-wrap: wrap; WHILE SQUIZING GO BELOW */
+    /* flex-wrap: nowrap; <default value> */
+    /* flex-wrap: wrap-reverse; WHILE SQUIZING GO ABOVE */
+
+
+    /* FLEX DIRECTION PROPERTIES */
+    /* flex-direction: column;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column-reverse; */
+
+    /* FLEX FLOW PROPERTIES-WRITE BOTH PROPWERTIES IN SINGLE LINE */
+    /* flex-flow: row-reverse wrap-reverse;
+    flex-flow: column wrap-reverse;
+    flex-flow: row wrap-reverse;
+    flex-flow:column-reverse wrap-reverse;
+    
+    /* JUSTIFY-CONTENT -> ALIGN-ITEM ACCORDING TO MAIN AXIS */
+/*  justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    justify-content: space-between ; */
+    /* justify-content: space-evenly; */
+
+
+    /* ALIGN-ITEMS-> APPLY ON CROSS AXIS */
+/*  align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+    align-items: stretch;
+    align-items: baseline; */
+    
+    /* TEXT IN THE CENTER */
+    justify-content: center;
+    align-items: center;
+    /* column-gap:10px ; */
+
+
+    /* gap: 10px;    add gap */
+
+    flex-wrap: wrap;
+
+    /* align-content: flex-start;
+    align-content: flex-end;
+    align-content: center;
+    align-content: space-between;
+    align-content: space-around; */
+}  
+
+
+
+
+.box{
+    border: 2px solid brown;
+    background-color: blue;
+    width: 150px;
+    flex-basis: 50px;
+    /* flex-grow:1; */
+    
+}
+
+
+
+/* order properties*/
+
+#box1{
+    order: 1;
+    flex-basis: 50%;
+    /* flex-grow: 1; */
+    /* flex-shrink: 4; */
+    /* align-self: flex-start; */
+}
+
+ #box3{
+    order: 4;
+    /* align-self: flex-end; */
+    /* flex-shrink: 4; */
+}
+
+#box2{
+    order: 8;
+    /* align-self:flex-end;
+    flex-basis: 100; */
+}
