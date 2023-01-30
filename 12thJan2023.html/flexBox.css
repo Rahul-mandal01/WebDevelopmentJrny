@@ -150,16 +150,23 @@
     /* flex-grow: 1; */
     /* flex-shrink: 4; */
     /* align-self: flex-start; */
+    align-self: stretch;
 }
 
  #box3{
     order: 4;
     /* align-self: flex-end; */
     /* flex-shrink: 4; */
+
 }
 
 #box2{
     order: 8;
     /* align-self:flex-end;
     flex-basis: 100; */
+    align-self: stretch;
+}
+
+#box4{
+    flex-grow: 5;
 }

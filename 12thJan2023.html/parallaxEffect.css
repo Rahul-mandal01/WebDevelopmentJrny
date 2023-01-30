@@ -1,13 +1,14 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;         /*content-box-sizw--small*/
+    
 }
 
 #wrapper{
-    height:100vh;
-    overflow-x: hidden;
-    perspective: 10px;
+    height:100vh;                   /*wrapper height should be equal to viewport(max height of viewport--100vh)*/
+    /* overflow-x: hidden; */       /*overflow stop in x-axis*/
+    perspective: 10px;              /*distance in between our eyes and z=0 */
 }
 
 .container{
@@ -16,12 +17,12 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    transform-style: preserve-3d;
+    transform-style: preserve-3d;           /* 3d preserve(Don't remove anything)*/
     z-index: -1;
 }
 
 .background{
-    transform: translateZ(-40px) scale(5);
+    transform: translateZ(-40px) scale(5);  
 }
 
 .foreground{
@@ -29,15 +30,15 @@
 }
 
 .background, .foreground{
-    position:absolute;
+    position:absolute;                          /* image will overlap*/
     height:100%;
     width:100%;
-    object-fit: cover;
-    z-index:-1;
+    object-fit: cover;                           /* Image will perfectly Fit in the screen*/   
+    z-index:-1;                                   
 }
 
 h1{
-    position: absolute;
+    position: absolute;             /* */
     top:5rem;
 
     font-size:10rem;
@@ -54,7 +55,7 @@ section{
 
 .secHeading{
     font-size:5rem;
-    padding:0 10rem;
+    padding: 0 10rem;
 }
 
 .text{
@@ -95,5 +96,4 @@ section{
 .bg3{
     background-image: url(sport-3.jpg);
 }
-
 
