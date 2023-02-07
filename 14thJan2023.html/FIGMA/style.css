@@ -1,0 +1,33 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    overflow-x:hidden;
+    height: 100vh;
+}
+
+.startimage{
+    margin-right: 100px;
+}
+
+.navButton{
+    top margin: 1px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.buttonText{
+    padding-top: 1rem;
+    color: blue;
+}
+
+.codeHelp{
+    display: flex;
+    border-radius: 2rem;
+}

@@ -1,0 +1,62 @@
+.container{
+    border: 1px solid brown;
+    background-color: yellow;
+    height: 700px;
+    width: 600px;
+
+    display: grid;
+    /* grid-gap: 10px; */
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2,100px);
+
+
+    /* HOW CONTENT WILL PLACED ON HORIZONTAL-AXIS */
+    /* justify-content: start;
+    justify-content: end;
+    justify-content: center;  
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly; */
+
+    /* align-items: start;
+    align-items: end;
+    align-items: baseline;
+    align-items: stretch; */
+
+    /* TALKING ABOUT ROWS_SPACING */
+    /* align-content: space-between;
+    align-content: space-evenly;
+    align-content: space-around;
+    align-content: center;
+    align-content: end;*/
+
+    /* BOTH ALIGN-CONTENT & JUSTIFY-CONTENT WORKS TOGETHER */
+    /* place-content: center; */
+
+    /* BOTH JUSTIFY-ITEMS AND ALIGN-ITEMS WILL WORK TOGETHER */
+    place-items: ;
+
+}
+
+.box{
+    background-color: aqua;
+    border: 1px solid saddlebrown;
+}
+
+#box1{
+
+    /* WORKS ON HORIZONTAL */
+    /* justify-self: start;
+    justify-self: end;
+    justify-self: center; */
+
+
+    /* WORKS ON CROSS-AXIS OR VERTICAL-AXIS */
+    /* align-self: stretch;
+    align-self: center;
+    align-self: end;
+    align-self: start; */
+
+
+
+}
