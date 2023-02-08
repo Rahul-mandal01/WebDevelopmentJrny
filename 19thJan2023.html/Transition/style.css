@@ -2,7 +2,7 @@
     height: 500px;
     width: 500px;
     background-color: green;
-    border:3px solid red;
+    border: 3px solid red;
     display: flex;
 }
 
@@ -10,18 +10,20 @@
     height: 150px;
     width: 150px;
     margin: 20px;
-    border:2px solid orange;
+    border: 2px solid orange;
     background-color: aqua;
-    /* transition: 2s; */
 
-    /* transition-property: background:background-color;
-    /* transition-delay: 5s; */
-    /* transition: background-color ls ease 0.3s;
-    transition: transform 3s cubic-bezier(1,0.09,0,1.68);
-    transition  */
+    /* transition: 2s; */
+    /* transition-property:background-color; */
+    /* transition-property: all; */
+    /* transition-delay: 0.5s; */
+
+    /* transition: all 5s ease 1s;*/     /*property_duration_transition timing function_delay */
+    transition: transform 3s cubic-bezier(1, -0.5, 0, 1.28);    /*ShortHand Property*/
 }
 
 .box:hover{
-    background-color: black;
-    transform: rotate(45deg);
+    /* background-color: brown;
+    transform: rotate(45deg); */
+    transform:translateX(500px);
 }
