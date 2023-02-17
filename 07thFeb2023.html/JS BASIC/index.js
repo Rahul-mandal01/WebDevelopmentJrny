@@ -1,43 +1,37 @@
-// // line below is uesd to print console window
-// console.log('Namaste Duniya Version3');
+// comment tag is for Readibility of code for user and I
+// line below is used to print on the console window
+// console.log('Namaste Duniya version3');
 
-// let a='rahul';
+// VARIABLE DECLARATION USING 'let' KEYWORD
+// let a='babbar';
 // console.log(a);
 
-// console.log(3==3);
 
-// let age=17;
-// let status=(age>=18)?'Yes Vote':'No vote';
-// console.log(status)
+// REDECLARATION IS NOT POSSIBLE
+// let a='babbar';
+// let a='5';
+// console.log(a);
 
-// int marks=98;
-// if(marks>=90)
-//     console.log'(A');
 
-// let num=2;
-// switch(num){
-//     case 1: console.log('A');
-//     break;
-//     case 2: console.log('B');
-//     break;
-//     default: console.log('C');
-// }
+// VARIABLE DECLARATION USING 'var' KEYWORD
+// var a='5';
+// console.log(a);
 
-// for(let i=0; i<5; i+=1){
-//     console.log(i);
-// }
 
-// let x=1;
-// while(x<=5){
-//     console.log(x)
-//     x++;
-// }
+// REDECLARATION IS POSSIBLE
+// var a='55';
+// var a='5';
+// var a='Bolo kya haal h';
+// console.log(a);
 
-// let y=0;
-// do{
-//     console.log(y);
-//     y++;
-// }
-// while(y<10);
+// const num=12;
+// num=13;
+
+// let a='babbar';
+// console.log(a);
+
+// a=5;
+// console.log(a);
+
 
 
