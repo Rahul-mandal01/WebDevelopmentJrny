@@ -426,3 +426,24 @@ a{
     font-style: italic;
     font-size: 16px;
 }
+.btn-grp{
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+
+}
+
+.btn-project:hover{
+    border:none;
+}
+
+.icon{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    transition: all 0.4s;
+}
+
+.icon:hover{
+    color: var(--bgOrange);
+}
