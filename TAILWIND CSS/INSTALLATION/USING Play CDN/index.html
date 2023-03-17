@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+    <!-- USING Play CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+
+    @layer components{
+        .bg-primary{
+            @apply bg-gradient-to-br
+            from-purple-100
+            to-pink-100
+            via-cyan-100;
+        }
+    }
+
+
+  </style>
+</head>
+<body>
+    <div class="w-full 
+                h-screen 
+                bg-primary
+                p-12 
+                
+                ">
+
+
+            <div class="prose prose-xl">
+                <h1 class="text-clifford">Hi, I'm Rahul</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                     Quo ipsam cupiditate veniam excepturi assumenda veritatis, omnis 
+                     provident deserunt vel minima libero soluta in debitis nulla voluptas 
+                     ullam sed mollitia fuga?
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                     Quo ipsam cupiditate veniam excepturi assumenda veritatis, omnis 
+                     provident deserunt vel minima libero soluta in debitis nulla voluptas 
+                     ullam sed mollitia fuga?
+                </p>
+            </div>
+            <div class="mt-12 ">
+            <a href="" class="px-8 py-3 rounded-md 
+                                bg-[#1DA1F2] 
+                                shadow-md shadow-[#1DA1F2]/40
+                                text-white 
+                                hover:bg-sky-600 
+
+                                "
+                                
+                                >Follow on Twitter</a>
+
+
+            </div>
+
+    </div>
+
+
+</body>
+</html>
