@@ -1,6 +1,6 @@
 // console.log('Lets get started');
 
-// obhject creation
+// object creation
 // let rectangle={
 //     length:1,
 //     breadth:2,
@@ -67,7 +67,7 @@
 
 // camelCase --> numberOfStudents
 // constructor Function --> Pascal Notation --> first letter of every word is capital  --> NumberOfStudents
-// onstructor Function --> properties/methods --> initialise/define
+// constructor Function --> properties/methods --> initialise/define
 // function Rectangle(){
 //     this.length=1;
 //     this.breadth=2;
@@ -82,19 +82,135 @@
 
 // --------------OR------------------------
 
-function Rectangle(len, bre){
-    this.length=len;
-    this.breadth=bre;
-    this.draw=function(){
-        console.log('drawing');
-    }
-}
+// function Rectangle(len, bre){
+//     this.length=len;
+//     this.breadth=bre;
+//     this.draw=function(){
+//         console.log('drawing');
+//     }
+// }
 
 // object creation using constructor function
-let rectangleObject = new Rectangle(5,6);
-rectangleObject.color='RED';
-console.log(rectangleObject);
+// let rectangleObject = new Rectangle(5,6);
+// rectangleObject.color='RED';
+// console.log(rectangleObject);
 
-delete rectangleObject.color;
+// delete rectangleObject.color;
+
+
+// Primitve types example
+// let a=10;
+// let b=a;
+
+// a++;
+
+// console.log(a);
+// console.log(b);
+
+// Reference types example
+// let a={value:10};
+// let b=a;
+// a.value++;
+
+// console.log(a.value);
+// console.log(b.value);
+
+// let a=10;
+// // inc--> increment
+// function inc(a){
+//     a++;
+
+// }
+// inc(a);
+// console.log(a);
+
+
+
+// let a={value:10};
+
+// function inc(a){
+//     a.value++;
+// }
+
+// inc(a);
+// console.log(a.value);
+
+
+// let rectangle ={
+//     length:2,
+//     breadth:4,
+// };
+
+// // for-in loop
+// for(let key in rectangle){
+//     // keys are reflected through key variable
+//     // values are reflected through rectangle [key]
+//     console.log(key,rectangle[key]);
+// }
+
+
+// // for-of Loop
+// for(let key of Object.keys(rectangle)){
+//     console.log(key);
+// }
+
+// print with values
+// for(let key of Object.entries(rectangle)){
+//     console.log(key);
+// }
+
+// if('length' in rectangle){
+//     console.log('present');
+// }
+// else{
+//     console.log('absent');
+// }
+
+// object_clone #1 using iterate
+// let src={
+//     a:10,
+//     b:20,
+//     c:30
+// };
+
+// let dest={};
+
+// for(let key in src){
+//     dest[key] = src[key];
+// }
+
+// console.log(dest);
+
+// src.a++;
+// console.log(dest);
+
+//object cloning #2 using Assign
+// let src={
+//     a:10,
+//     b:20,
+//     c:30
+// };
+
+// let src2={value:26};
+// let dest = Object.assign({},src,src2);
+// console.log(dest);
+// src.a++;
+// console.log(dest);
+
+
+// object cloning #3 using spread
+// let src={
+//     a:10,
+//     b:20,
+//     c:30
+// };
+
+// let dest={...src};
+// console.log(dest);
+// src.a++;
+
+// console.log(dest)
+
+
 
 
