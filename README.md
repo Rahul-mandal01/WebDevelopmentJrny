@@ -1,2 +1,2 @@
 # WebDevelopmentJrny
-All the code related to Web Development Class
+All the codes related to Web Development Class
