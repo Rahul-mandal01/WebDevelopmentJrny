@@ -1,15 +1,15 @@
 {
-  "name": "tailwind_pro",
+  "name": "counter_app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
     "start": "vite"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vite": "^4.4.6"
+    "vite": "^4.4.7"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
