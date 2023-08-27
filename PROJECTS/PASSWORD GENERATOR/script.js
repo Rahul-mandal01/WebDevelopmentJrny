@@ -19,7 +19,7 @@ let password = "";
 let passwordLength = 10;
 let checkCount = 0;
 handleSlider();
-//ste strength circle color to grey
+//set strength circle color to grey
 
 
 //set passwordLength
@@ -98,7 +98,9 @@ async function copyContent() {
 function shufflePassword(array) {
     //Fisher Yates Method
     for (let i = array.length - 1; i > 0; i--) {
+        // random j, find out using random function
         const j = Math.floor(Math.random() * (i + 1));
+        // swap number at i index and j index
         const temp = array[i];
         array[i] = array[j];
         array[j] = temp;
