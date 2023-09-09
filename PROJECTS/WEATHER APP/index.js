@@ -43,7 +43,7 @@ async function getCustomWeatherDetails(){
     try{
         let latitude = 22.572;
         let longitude= 88.3573;
-    
+     
         let result = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`);
     
         let data = await result.json();
