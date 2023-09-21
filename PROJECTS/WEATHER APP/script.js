@@ -1,3 +1,4 @@
+
 const userTab = document.querySelector("[data-userWeather]");
 const searchTab = document.querySelector("[data-searchWeather]");
 const userContainer = document.querySelector(".weather-container");
@@ -30,6 +31,7 @@ function switchTab(newTab) {
             grantAccessContainer.classList.remove("active");
             searchForm.classList.add("active");
         }
+
         else {
             //main pehle search wale tab pr tha, ab your weather tab visible karna h 
             searchForm.classList.remove("active");
@@ -37,21 +39,22 @@ function switchTab(newTab) {
             //ab main your weather tab me aagya hu, toh weather bhi display karna poadega, so let's check local storage first
             //for coordinates, if we haved saved them there.
             getfromSessionStorage();
-        }
+            }
     }
 }
 
 userTab.addEventListener("click", () => {
-    //pass clicked tab as input paramter
+    //pass clicked tab as input parameter
     switchTab(userTab);
 });
 
 searchTab.addEventListener("click", () => {
-    //pass clicked tab as input paramter
+    //pass clicked tab as input parameter
     switchTab(searchTab);
 });
 
-//check if cordinates are already present in session storage
+
+//check if coordinates are already present in session storage
 function getfromSessionStorage() {
     const localCoordinates = sessionStorage.getItem("user-coordinates");
     if(!localCoordinates) {
@@ -78,15 +81,12 @@ async function fetchUserWeatherInfo(coordinates) {
             `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
           );
         const  data = await response.json();
-        if (!data.sys) {
-            throw data;
-          }
 
         loadingScreen.classList.remove("active");
         userInfoContainer.classList.add("active");
         renderWeatherInfo(data);
     }
-    catch(err) {
+    catch(error) {
         
         // console.log("User - Api Fetch Error", error.message);
         loadingScreen.classList.remove("active");
@@ -94,14 +94,13 @@ async function fetchUserWeatherInfo(coordinates) {
         apiErrorImg.style.display = "none";
         apiErrorMessage.innerText = `Error: ${error?.message}`;
         apiErrorBtn.addEventListener("click", fetchUserWeatherInfo);
-
-
+        
     }
 
 }
 
 function renderWeatherInfo(weatherInfo) {
-    //fistly, we have to fethc the elements 
+    //fistly, we have to fetch the elements 
 
     const cityName = document.querySelector("[data-cityName]");
     const countryIcon = document.querySelector("[data-countryIcon]");
@@ -114,7 +113,7 @@ function renderWeatherInfo(weatherInfo) {
 
     console.log(weatherInfo);
 
-    //fetch values from weatherINfo object and put it UI elements
+    //fetch values from weatherIfo object and put it UI elements
     cityName.innerText = weatherInfo?.name;
     countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
     desc.innerText = weatherInfo?.weather?.[0]?.description;
@@ -158,7 +157,7 @@ function showError(error) {
         break;
       case error.POSITION_UNAVAILABLE:
         messageText.innerText = "Location information is unavailable.";
-        break;13
+        break;
       case error.TIMEOUT:
         messageText.innerText = "The request to get user location timed out.";
         break;
@@ -201,7 +200,7 @@ async function fetchSearchWeatherInfo(city) {
         userInfoContainer.classList.add("active");
         renderWeatherInfo(data);
     }
-    catch(err) {
+    catch(error) {
         // console.log("Search - Api Fetch Error", error.message);
         loadingScreen.classList.remove("active");
         apiErrorContainer.classList.add("active");
