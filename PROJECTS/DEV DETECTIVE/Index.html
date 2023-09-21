@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Detective</title>
+    <meta name="author" content="RAHUL KUMAR MANDAL">
+    <meta name="copyright" content="Copyright © 2023 Rahul Kumar Mandal">
+    <link rel="icon" href="./assets/fevicon.png" type="image/x-icon">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+
+        <!-- DevDetective container -->
+        <div class="Dev-container">
+
+            <h2>DevDetective</h2>
+
+            <h6 data-light >Light</h6>
+            <h6 data-dark >Dark</h6>
+            <i class="fa fa-moon-o" aria-hidden="true" data-LightIcon></i>
+            <i class="fa fa-sun-o" aria-hidden="true" data-darkIcon></i>
+
+        </div>
+
+
+        <!-- search form -->
+            <form class="search-container" data-searchForm>
+
+                <i class="fa fa-search"></i>
+                <input placeholder="Enter a Github username..." data-searchInput>
+                <button class="btn" type="submit" data-searchBtn >Search</button>
+            </form>
+
+        
+
+            <!-- show user information -->
+            <div class="user-info-container">
+
+                <div class="left-column">
+                    <!-- user-image -->
+                    <p data-userImage class="user-Image"></p>
+                </div>
+
+                
+            </div>
+
+
+        
+
+
+    </div>
+
+
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>
