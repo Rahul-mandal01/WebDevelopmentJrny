@@ -1,6 +1,5 @@
 
 
-
 const lightMode = document.querySelector("[data-lightMode]");
 const darkMode = document.querySelector("[data-darkMode]");
 const searchForm = document.querySelector("[data-searchForm]");
