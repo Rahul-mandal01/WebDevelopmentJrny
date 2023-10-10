@@ -1,102 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Detective</title>
-    <meta name="author" content="RAHUL KUMAR MANDAL">
-    <meta name="copyright" content="Copyright © 2023 Rahul Kumar Mandal">
-    <link rel="icon" href="./assets/fevicon.png" type="image/x-icon">
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>DevDetective - CodeHelp</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    <link rel="manifest" href="./assets/site.webmanifest">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-
-    <div class="wrapper">
-
-
-        <!-- DevDetective container -->
-        <div class="Dev-container">
-
-            <h2>DevDetective</h2>
-
-            <h6 data-LightMode >Light</h6>
-            <h6 data-darkMode >Dark</h6>
-            <i class="fa fa-moon-o" aria-hidden="true" data-LightMode></i>
-            <i class="fa fa-sun-o" aria-hidden="true" data-darkMode></i>
-
-        </div>
-
-
-        <!-- search form -->
-            <form class="search-container" data-searchForm>
-
-                <i class="fa fa-search"></i>
-                <input placeholder="Enter a Github username..." data-searchInput>
-                <button class="btn" type="submit" data-searchBtn >Search</button>
-            </form>
-
-        
-
-            <!-- show user information -->
-            <div class="user-info-container">
-
-                <div class="left-column">
-                    <!-- user-image -->
-                    <p data-userImage class="user-Image"></p>
-                </div>
-
-                <div class="right-column">
-                    <!-- user name -->
-                    <h2 class="user-name" data-username></h2>
-                    <!-- user joined detail -->
-                    <h5 class="userJoinedDetail" data-joinedDetail></h5>
-                    <!-- user id -->
-                    <p class="user-id" data-userId></p>
-                    <!-- user bio -->
-                    <p class="user-bio" data-userBio></p>
-                    
-                    <div class="">
-                        <!-- user repo-->
-                        <p class="sub-container">Repos</p>
-                        <p class="user-repo" data-userRepo></p>
-                        <!-- user followers -->
-                        <p class="sub-container">Followers</p>
-                        <p class="user-followers" data-userFollowers></p>
-                        <!-- user following -->
-                        <p class="sub-container">following</p>
-                        <p class="user-following" data-userFollowing></p>
-
-                    </div>
-
-                    <div>
-                        <!-- user location -->
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <p class="user-location" data-userLocation></p>
-
-                        <!-- user social accounts links-->
-                        <i class="fa fa-link" aria-hidden="true"></i>
-                        <p class="user-links" data-userLinks></p>
-
-                        <!-- user twitter accounts -->
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        <p class="user-twitter" data-userTwitter></p>
-
-                        <!-- user company -->
-                        <i class="fa fa-building" aria-hidden="true"></i>
-                        <p class="user-company" data-userCompany></p>
-                    </div>
-
-                </div>
-          
+    <div class="container">
+        <header class="header">
+            <h1 class="title">DevDetective</h1>
+            <div id="btn-mode">
+                <p id="mode-text">DARK</p>
+                <div class="icon-container"><img id="mode-icon" src="./assets/images/moon-icon.svg" alt=""></div>
             </div>
-
+        </header>
+        <main>
+            <div id="app">
+                <div class="searchbar-container active">
+                    <input type="search" name="user-input" id="input" placeholder="Enter a GitHub username..." required>
+                    <div class="error">
+                        <p id="no-results">no search results</p>
+                    </div>
+                    <button class="btn-search" id="submit">Search</button>
+                </div>
+                <div class="profile-container">
+                    <div class="profile-content">
+                        <div class="profile-header">
+                            <img id="avatar" src="#" alt="">
+                            <div class="profile-info-wrapper">
+                                <div class="profile-name">
+                                    <h2 id="name"></h2>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" id="user"></a>
+                                </div>
+                                <p id="date"></p>
+                            </div>
+                        </div>
+                        <p id="bio"></p>
+                        <div class="profile-stats-wrapper">
+                            <div class="profile-stat">
+                                <p class="stat-title">Repos</p>
+                                <p id="repos" class="stat-value"></p>
+                            </div>
+                            <div class="profile-stat">
+                                <p class="stat-title">Followers</p>
+                                <p id="followers" class="stat-value"></p>
+                            </div>
+                            <div class="profile-stat">
+                                <p class="stat-title">Following</p>
+                                <p id="following" class="stat-value"></p>
+                            </div>
+                        </div>
+                        <div class="profile-bottom-wrapper">
+                            <div class="profile-info">
+                                <div class="bottom-icons"><img src="./assets/images/location-icon.svg" alt=""></div>
+                                <p id="location"></p>
+                            </div>
+                            <div class="profile-info">
+                                <div class="bottom-icons"><img src="./assets/images/website-icon.svg" alt=""></div>
+                                <a href="#" id="page"></a>
+                            </div>
+                            <div class="profile-info">
+                                <div class="bottom-icons"><img src="./assets/images/twitter-icon.svg" alt=""></div>
+                                <a href="#" id="twitter"></a>
+                            </div>
+                            <div class="profile-info">
+                                <div class="bottom-icons"><img src="./assets/images/company-icon.svg" alt=""></div>
+                                <p id="company"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-
-
-    
-
     <script src="./script.js"></script>
 </body>
+
 </html>
