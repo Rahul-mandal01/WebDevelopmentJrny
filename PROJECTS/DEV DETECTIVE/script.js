@@ -24,6 +24,7 @@ const user_location = get("location");
 const page = get("page");
 const twitter = get("twitter");
 const company = get("company");
+const noresults = get("no-results");
 let darkMode = false;
 
 // Event Listeners
@@ -59,16 +60,17 @@ btnmode.addEventListener("click", function () {
 
 // Functions
 function getUserData(gitUrl) {
-  fetch(gitUrl)
-    .then((response) => response.json())
+  fetch(gitUrl) // Initiates a network request to the provided URL
+    .then((response) => response.json()) // Parses the response as JSON
     .then((data) => {
-      console.log(data);
-      updateProfile(data);
+      console.log(data); // Logs the fetched data to the console
+      updateProfile(data); // Calls the updateProfile function with the fetched data
     })
     .catch((error) => {
-      throw error;
+      throw error; // Throws an error if the fetch operation fails
     });
 }
+
 
 function updateProfile(data) {
   if (data.message !== "Not Found") {
@@ -143,5 +145,6 @@ function lightModeProperties() {
   localStorage.setItem("dark-mode", false);
 }
 
-
+profilecontainer.classList.toggle("active");
+searchbar.classList.toggle("active");
 getUserData(url + "Rahul-mandal01");
