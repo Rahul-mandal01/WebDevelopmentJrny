@@ -147,4 +147,4 @@ function lightModeProperties() {
 
 profilecontainer.classList.toggle("active");
 searchbar.classList.toggle("active");
-getUserData(url + "Rahul-mandal01");
+getUserData(url + "a");
