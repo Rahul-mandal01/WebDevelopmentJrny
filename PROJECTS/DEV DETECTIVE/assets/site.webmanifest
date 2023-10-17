@@ -1,13 +1,13 @@
-{"name":"",
+{"name" : "",
 "short_name":"",
 "icons": [
     {
-      "src": "./webmanifest-192x192.png",
+      "src": "/webmanifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "./webmanifest-512x512.png",
+      "src": "/webmanifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
