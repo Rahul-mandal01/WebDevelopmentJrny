@@ -75,7 +75,7 @@
     border: 1px solid rgba(255, 255, 255, 0.25);
     padding: 0.5rem 2rem;
     cursor:pointer;
-    /* display: none; */
+    display: none;
 }
 
 .btn.active{
@@ -83,5 +83,5 @@
 }
 
 .win{
-    background-color: rgba(0,255,0,0.3);
+    background-color: rgba(225, 11, 236, 0.3);
 }
