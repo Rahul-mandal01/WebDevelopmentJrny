@@ -1,5 +1,4 @@
 
-
 //Variables
 const searchbar = document.querySelector(".searchbar-container");
 const profilecontainer = document.querySelector(".profile-container");
@@ -118,6 +117,7 @@ if (localStorage.getItem("dark-mode")) {
   localStorage.setItem("dark-mode", prefersDarkMode);
   darkMode = prefersDarkMode;
   lightModeProperties();
+
 }
 
 function darkModeProperties() {
