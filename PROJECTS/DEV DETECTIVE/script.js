@@ -1,10 +1,10 @@
-
 //Variables
 const searchbar = document.querySelector(".searchbar-container");
 const profilecontainer = document.querySelector(".profile-container");
 const root = document.documentElement.style;
 const get = (param) => document.getElementById(`${param}`);
 const url = "https://api.github.com/users/";
+const noresults = get("no-results");
 const btnmode = get("btn-mode");
 const modetext = get("mode-text");
 const modeicon = get("mode-icon");
@@ -23,7 +23,6 @@ const user_location = get("location");
 const page = get("page");
 const twitter = get("twitter");
 const company = get("company");
-const noresults = get("no-results");
 let darkMode = false;
 
 // Event Listeners
@@ -32,10 +31,12 @@ btnsubmit.addEventListener("click", function () {
     getUserData(url + input.value);
   }
 });
-
 input.addEventListener(
   "keydown",
   function (e) {
+    if (!e) {
+      var e = window.event;
+    }
     if (e.key == "Enter") {
       if (input.value !== "") {
         getUserData(url + input.value);
@@ -44,11 +45,11 @@ input.addEventListener(
   },
   false
 );
-
 input.addEventListener("input", function () {
   noresults.style.display = "none";
+  profilecontainer.classList.remove("active");
+  searchbar.classList.add("active");
 });
-
 btnmode.addEventListener("click", function () {
   if (darkMode == false) {
     darkModeProperties();
@@ -59,18 +60,16 @@ btnmode.addEventListener("click", function () {
 
 // Functions
 function getUserData(gitUrl) {
-  fetch(gitUrl) // Initiates a network request to the provided URL
-    .then((response) => response.json()) // Parses the response as JSON
+  fetch(gitUrl)
+    .then((response) => response.json())
     .then((data) => {
-      console.log(data); // Logs the fetched data to the console
-      updateProfile(data); // Calls the updateProfile function with the fetched data
+      console.log(data);
+      updateProfile(data);
     })
     .catch((error) => {
-      throw error; // Throws an error if the fetch operation fails
+      throw error;
     });
 }
-
-
 function updateProfile(data) {
   if (data.message !== "Not Found") {
     noresults.style.display = "none";
@@ -106,18 +105,28 @@ function updateProfile(data) {
   }
 }
 
-
-//dark mode default
+// This code checks if the user's device has a preference for dark mode
 const prefersDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-if (localStorage.getItem("dark-mode")) {
-  darkMode = localStorage.getItem("dark-mode");
-  darkModeProperties();
+// Check if there is a value for "dark-mode" in the user's localStorage
+if (localStorage.getItem("dark-mode") === null) {
+  // If there is no value for "dark-mode" in localStorage, check the device preference
+  if (prefersDarkMode) {
+    // If the device preference is for dark mode, apply dark mode properties
+    darkModeProperties();
+  } else {
+    // If the device preference is not for dark mode, apply light mode properties
+    lightModeProperties();
+  }
 } else {
-  localStorage.setItem("dark-mode", prefersDarkMode);
-  darkMode = prefersDarkMode;
-  lightModeProperties();
-
+  // If there is a value for "dark-mode" in localStorage, use that value instead of device preference
+  if (localStorage.getItem("dark-mode") === "true") {
+    // If the value is "true", apply dark mode properties
+    darkModeProperties();
+  } else {
+    // If the value is not "true", apply light mode properties
+    lightModeProperties();
+  }
 }
 
 function darkModeProperties() {
@@ -144,7 +153,6 @@ function lightModeProperties() {
   darkMode = false;
   localStorage.setItem("dark-mode", false);
 }
-
 profilecontainer.classList.toggle("active");
 searchbar.classList.toggle("active");
 getUserData(url + "Rahul-mandal01");
