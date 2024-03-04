@@ -1,0 +1,18 @@
+Meaning of props.className:
+
+In React, props.className refers to a property named className that is passed to a React component as part of its props object.
+
+The className prop is a standard HTML attribute used to specify one or more CSS classes for an element. In React, you can use it to apply CSS styles to the component.
+
+For example, if you have a React component like this:
+
+function MyComponent(props) {
+  return <div className={props.className}>Hello, world!</div>;
+}
+
+
+<MyComponent className="my-class" />
+<div class="my-class">Hello, world!</div>
+
+
+In this example, the value of props.className is "my-class", which is passed to the className attribute of the div element. This allows you to style the component using CSS rules defined for the class my-class.
