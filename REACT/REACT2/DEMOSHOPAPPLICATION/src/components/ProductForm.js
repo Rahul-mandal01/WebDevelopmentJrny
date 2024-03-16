@@ -1,8 +1,9 @@
-import './ProductForm'
+// import './ProductForm'
+import './ProductForm.css'
 
 function ProductForm(){
 
-    return(<form>
+    return (<form>
 
         <div className='new-product_controls'>
             <div className='new-product_control'>
