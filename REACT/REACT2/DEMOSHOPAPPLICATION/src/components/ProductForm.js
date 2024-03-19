@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './ProductForm'
 import './ProductForm.css'
 
-function ProductForm(){
+function ProductForm(props){
 
 
     // const[title, setTitle] = useState('');
@@ -33,7 +33,10 @@ function ProductForm(){
             date:newDate,
         };
 
-        console.log(productData);
+
+
+        // console.log(productData);
+        props.onSaveProduct(productData);
         
         setTitle('');
         setDate('');
@@ -46,7 +49,7 @@ function ProductForm(){
         <div className='new-product_controls'>
             <div className='new-product_control'>
                 <label>Title</label>
-                <input type='text' value={newTitle} onChange={titleChangeHandler} ></input>
+                <input type='text' value= {newTitle} onChange={titleChangeHandler} ></input>
             </div>
 
             <div className='new-product_control'>
