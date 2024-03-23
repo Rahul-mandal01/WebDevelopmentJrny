@@ -1,6 +1,6 @@
 import Card from './Card';
 
-function Tours(tours, removeTour){
+function Tours({tours, removeTour}){
     return (
         <div>
             <div>
@@ -9,15 +9,14 @@ function Tours(tours, removeTour){
 
             <div>
                 {
-                    tours.map ( (tours) => {
+                    tours.map ( (tour) => {
 
-                        return <Card {...tours} removeTour={removeTour}></Card>
+                        return <Card key={tour.id} {...tour} removeTour={removeTour}></Card>
                     } )
                 }
             </div>
         </div>
     );
-
 }
 
 export default Tours;
