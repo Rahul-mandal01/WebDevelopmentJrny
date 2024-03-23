@@ -5,7 +5,7 @@ function Card({id, image,info,price,name, removeTour}){
 
     const[readmore, setReadmore] = useState(false);
 
-    const description = `${info.substring(0,200)}....`
+    const description = readmore  ? info: `${info.substring(0,200)}....`;
 
     function readmoreHandler(){
         setReadmore(!readmore);
@@ -23,9 +23,7 @@ function Card({id, image,info,price,name, removeTour}){
                 </div>
                 <div className="description" >
                         {description}
-                        <span className="read-more" onClick={readmoreHandler}>
-                            {readmore ? `show less`: `read more`}
-                        </span>
+                        <span className="read-more" onClick={readmoreHandler}>{readmore ? `show less`: `read more`}</span>
                 </div>
             </div>
             <button className="btn-red" onClick={() => removeTour(id)}>
