@@ -48,6 +48,6 @@ const data = [
 		image: "https://cdn.thecodehelp.in/Kochi.jpeg",
 		price: "68,595",
 	},
-]
+];
 
 export default data;
