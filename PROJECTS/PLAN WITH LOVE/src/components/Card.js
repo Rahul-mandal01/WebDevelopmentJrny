@@ -11,8 +11,6 @@ function Card({id, image,info,price,name, removeTour}){
         setReadmore(!readmore);
     }
 
-
-
     return(
         <div className="card">
             <img src={image} alt="" className="image" ></img> 
@@ -22,9 +20,10 @@ function Card({id, image,info,price,name, removeTour}){
                     <h4 className="tour-name">{name}</h4>
                 </div>
                 <div className="description" >
-                        {description}
-                        <span className="read-more" onClick={readmoreHandler}>{readmore ? `show less`: `read more`}</span>
+                    {description}
+                        <span className="read-more" onClick={readmoreHandler}>{readmore ? `Show Less`: `Read More`}</span>
                 </div>
+                
             </div>
             <button className="btn-red" onClick={() => removeTour(id)}>
                 Not interested
