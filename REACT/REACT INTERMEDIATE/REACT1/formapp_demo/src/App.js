@@ -22,7 +22,7 @@ function App() {
   // }
 
   const [formData, setFormData] = useState( {firstName:"", lastName:"", email:"", comments:""
-    , isVisible:true});
+    , isVisible:true, mode:""});
   console.log(formData);
 
 
@@ -95,6 +95,38 @@ function App() {
             />
 
             <label htmlFor='isVisible' >Am I visible?</label>
+
+            <br/>
+            <br/>
+
+            <fieldset>
+              <legend>Mode:</legend>
+              <input
+              type='radio'
+              onChange={changeHandler}
+              name ="mode"
+              value="Online Mode"
+              id="Online-Mode"
+              checked={formData.mode === "Online-Mode"}
+
+              />
+
+              <label htmlFor='Online-mode' > Online Mode  </label>
+
+              <input
+                type='radio'
+                onChange={changeHandler}
+                name ="mode"
+                value="Offline Mode"
+                id="Offline-Mode"
+                checked={formData.mode === "Offline-Mode"}
+
+              />
+
+              <label htmlFor='Offline-mode' > Offline Mode  </label>
+            </fieldset>
+
+
 
 
         </form>
