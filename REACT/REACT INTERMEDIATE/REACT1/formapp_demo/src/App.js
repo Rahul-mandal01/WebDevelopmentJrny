@@ -22,8 +22,7 @@ function App() {
   // }
 
   const [formData, setFormData] = useState( {firstName:"", lastName:"", email:"", comments:""
-    , isVisible:true, mode:""});
-  console.log(formData);
+    , isVisible:true, mode:"", favCar:"" });
 
 
   function changeHandler(event){
@@ -37,11 +36,18 @@ function App() {
     });
   }
 
+  function submitHandler(event){
+    event.preventDefault();
+    // print
+    console.log("Finally printing the entire form data...")
+    console.log(formData)
+  }
+
 
 
   return (
     <div className="App">
-        <form>
+        <form onSubmit={submitHandler} >
 
           <input 
           type="text" 
@@ -105,7 +111,7 @@ function App() {
               type='radio'
               onChange={changeHandler}
               name ="mode"
-              value="Online Mode"
+              value="Online-Mode"
               id="Online-Mode"
               checked={formData.mode === "Online-Mode"}
 
@@ -117,7 +123,7 @@ function App() {
                 type='radio'
                 onChange={changeHandler}
                 name ="mode"
-                value="Offline Mode"
+                value="Offline-Mode"
                 id="Offline-Mode"
                 checked={formData.mode === "Offline-Mode"}
 
@@ -126,6 +132,32 @@ function App() {
               <label htmlFor='Offline-mode' > Offline Mode  </label>
             </fieldset>
 
+            <br/>
+            
+
+            <label htmlFor='favCar' >Tell me your favourite Car  </label>
+            <br/>
+
+
+            <select
+              onChange={changeHandler}
+              name="favCar"
+              id='favCar'
+              value={formData.favCar}  
+              >
+              <option value="scarpio" >Scarpio</option>
+              <option value="Fartuner" >Fartuner</option>
+              <option value="Tharr" >Tharr</option>
+              <option value="Legender" >Legender</option>
+              <option value="Defender" >Defender</option>
+              <option value="Tata" >Tataa</option>
+
+
+            </select>
+            <br/>
+            <br/>
+
+            <button  >Submit</button>
 
 
 
